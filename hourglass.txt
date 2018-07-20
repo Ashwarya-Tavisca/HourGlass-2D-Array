@@ -1,0 +1,11 @@
+int hourglassSum(int arr_rows, int arr_columns, int** arr) {
+   int row, column, currentSum = 0, maximum = -999;
+    
+    for(row = 1; row < arr_rows-1; row++){
+        for(column = 1; column < arr_columns-1; column++) {
+            currentSum = arr[row][column] + arr[row-1][column] + arr[row+1][column] + arr[row-1]             [column-1] + arr[row-1][column+1] +  arr[row+1][column-1] + arr[row+1][column+1];
+            (maximum < currentSum )? maximum = currentSum: maximum;
+              }
+    }
+    return maximum;
+}
